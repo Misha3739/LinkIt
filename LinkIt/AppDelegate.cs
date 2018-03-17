@@ -22,13 +22,13 @@ namespace LinkIt
             menu.AddItem(new NSMenuItem()
             {
                 Action = new ObjCRuntime.Selector("linkedAction"),
-                Title = "Linked action",
+                Title = "LinkIt",
                 KeyEquivalent = "L"
             });
             menu.AddItem(new NSMenuItem()
             {
                 Action = new ObjCRuntime.Selector("quitAction"),
-                Title = "Quit action",
+                Title = "Quit",
                 KeyEquivalent = "Q"
             });
             _barItem.Menu = menu;
