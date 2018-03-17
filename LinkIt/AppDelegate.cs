@@ -17,7 +17,7 @@ namespace LinkIt
         {
             // Insert code here to initialize your application
             _barItem = NSStatusBar.SystemStatusBar.CreateStatusItem(NSStatusItemLength.Variable);
-            _barItem.Title = "LINK IT!";
+            _barItem.Image = NSImage.ImageNamed("AppIcon");
             var menu = new NSMenu();
             menu.AddItem(new NSMenuItem()
             {
