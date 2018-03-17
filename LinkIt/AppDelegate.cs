@@ -18,9 +18,19 @@ namespace LinkIt
             // Insert code here to initialize your application
             _barItem = NSStatusBar.SystemStatusBar.CreateStatusItem(NSStatusItemLength.Variable);
             _barItem.Title = "LINK IT!";
-
-           
-            _barItem.Action = new ObjCRuntime.Selector("linkedAction");
+            var menu = new NSMenu();
+            menu.AddItem(new NSMenuItem()
+            {
+                Action = new ObjCRuntime.Selector("linkedAction"),
+                Title = "Linked action"
+            });
+            menu.AddItem(new NSMenuItem()
+            {
+                Action = new ObjCRuntime.Selector("quitAction"),
+                Title = "Quit action"
+            });
+            _barItem.Menu = menu;
+           // _barItem.Action = new ObjCRuntime.Selector("linkedAction");
         }
         public override void WillTerminate(NSNotification notification)
         {
@@ -30,6 +40,12 @@ namespace LinkIt
         private void Linked()
         {
             Debug.WriteLine("Linked pressed");
+        }
+
+        [Action("quitAction")]
+        private void Quit()
+        {
+            NSApplication.SharedApplication.Terminate(this);
         }
     }
 }
