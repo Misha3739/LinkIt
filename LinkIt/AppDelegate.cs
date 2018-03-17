@@ -42,6 +42,23 @@ namespace LinkIt
         private void Linked()
         {
             Debug.WriteLine("Linked pressed");
+
+            var items = NSPasteboard.GeneralPasteboard.PasteboardItems;
+            const string textType = "public.utf8-plain-text";
+            foreach(var item in items)
+            {
+                foreach(var type in item.Types)
+                {
+                    if(type == textType)
+                    {
+                        string clipboardText = item.GetStringForType(textType);
+                        NSPasteboard.GeneralPasteboard.ClearContents();
+
+                        NSPasteboard.GeneralPasteboard.SetStringForType($"<a href =\"{clipboardText}\">{clipboardText}</a>","public.html");
+
+                    }
+                }
+            }
         }
 
         [Action("quitAction")]
