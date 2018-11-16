@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="Resources\Icons\" />
     <Folder Include="Assets.xcassets\LinkImage.imageset\" />
   </ItemGroup>
   <ItemGroup>
@@ -83,11 +82,11 @@
     <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Icons\first-aid-kit-2.png" />
-    <BundleResource Include="Resources\Icons\first-aid-kit.png" />
-    <BundleResource Include="Resources\Icons\first-aid-kit-4.png" />
-    <BundleResource Include="Resources\Icons\first-aid-kit-3.png" />
-    <BundleResource Include="Resources\Icons\first-aid-kit-5.png" />
+    <BundleResource Include="Resources\first-aid-kit.png" />
+    <BundleResource Include="Resources\first-aid-kit-2.png" />
+    <BundleResource Include="Resources\first-aid-kit-3.png" />
+    <BundleResource Include="Resources\first-aid-kit-4.png" />
+    <BundleResource Include="Resources\first-aid-kit-5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

@@ -17,7 +17,7 @@ namespace LinkIt
         {
             // Insert code here to initialize your application
             _barItem = NSStatusBar.SystemStatusBar.CreateStatusItem(NSStatusItemLength.Variable);
-            _barItem.Image = NSImage.ImageNamed("AppIcon");
+            _barItem.Image = NSImage.ImageNamed("first-aid-kit-3");
             var menu = new NSMenu();
             menu.AddItem(new NSMenuItem()
             {
@@ -32,7 +32,7 @@ namespace LinkIt
                 KeyEquivalent = "Q"
             });
             _barItem.Menu = menu;
-           // _barItem.Action = new ObjCRuntime.Selector("linkedAction");
+            _barItem.Action = new ObjCRuntime.Selector("linkedAction");
         }
         public override void WillTerminate(NSNotification notification)
         {
